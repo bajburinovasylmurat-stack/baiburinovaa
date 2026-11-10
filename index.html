@@ -8,6 +8,7 @@
 <meta property="og:title" content="Тогжан — Мобилограф · SMM">
 <meta property="og:description" content="Reels, Stories, органический рост без бюджета. Ролики до 7,1M просмотров.">
 <meta property="og:image" content="togzhan.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Onest:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
@@ -29,8 +30,18 @@ h1,h2,.logo,.stat b,.badge b,.m b{font-family:Unbounded,Onest,sans-serif}
 /* nav */
 nav{position:sticky;top:0;z-index:20;background:rgba(15,13,12,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-.logo{font-weight:800;letter-spacing:.5px}
-.logo span{color:var(--accent)}
+.logo{display:inline-flex;align-items:center;gap:11px;font-weight:800;letter-spacing:1.5px;font-size:17px}
+.logo .mark{width:36px;height:36px;flex:none;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.logo:hover .mark{transform:rotate(-8deg) scale(1.06)}
+.logo .vf{stroke-dasharray:14 6;animation:vf 8s linear infinite}
+@keyframes vf{to{stroke-dashoffset:-80}}
+.logo .recdot,.logo .rec{animation:rec 1.6s ease-in-out infinite}
+@keyframes rec{50%{opacity:.25}}
+.logo .word{display:inline-flex;align-items:center;line-height:1}
+.logo .lens{display:inline-block;width:.86em;height:.86em;margin:0 .04em;border-radius:50%;border:.17em solid var(--text);position:relative;background:radial-gradient(circle at 50% 50%,var(--accent) 0 28%,transparent 30%)}
+.logo .lens::after{content:"";position:absolute;width:.16em;height:.16em;border-radius:50%;background:#fff;top:.06em;right:.06em;opacity:.9}
+.logo .rec{display:inline-block;width:.34em;height:.34em;border-radius:50%;background:#ff4d3d;margin-left:.14em;align-self:flex-end;margin-bottom:.06em;box-shadow:0 0 10px #ff4d3d}
+footer .logo{font-size:26px;margin-bottom:14px}footer .logo .mark{width:52px;height:52px}
 .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted)}
 .navlinks a:hover{color:var(--text)}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s;font-family:inherit}
@@ -197,7 +208,7 @@ footer{padding:40px 0 100px;color:var(--muted);font-size:14px;text-align:center}
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="logo">TOGZHAN<span>.</span></a>
+    <a href="#top" class="logo" aria-label="TOGZHAN."><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2b38a"/><stop offset="1" stop-color="#e0703f"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#1d1917" stroke="#2e2724"/><path class="vf" d="M10 22V14a4 4 0 0 1 4-4h8M42 10h8a4 4 0 0 1 4 4v8M54 42v8a4 4 0 0 1-4 4h-8M22 54h-8a4 4 0 0 1-4-4v-8" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 21h24M32 21v23" stroke="#f4eee9" stroke-width="6.5" stroke-linecap="round"/><circle class="recdot" cx="45" cy="44" r="4.5" fill="#ff4d3d"/></svg><span class="word">TOG<span class="lens"></span>ZHAN<span class="rec"></span></span></a>
     <div class="navlinks">
       <a href="#about">Обо мне</a>
       <a href="#viral">Reels</a>
@@ -310,7 +321,7 @@ footer{padding:40px 0 100px;color:var(--muted);font-size:14px;text-align:center}
   </div>
 </section>
 
-<footer>© Тогжан · Мобилограф · SMM</footer>
+<footer><a href="#top" class="logo" aria-label="TOGZHAN."><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2b38a"/><stop offset="1" stop-color="#e0703f"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#1d1917" stroke="#2e2724"/><path class="vf" d="M10 22V14a4 4 0 0 1 4-4h8M42 10h8a4 4 0 0 1 4 4v8M54 42v8a4 4 0 0 1-4 4h-8M22 54h-8a4 4 0 0 1-4-4v-8" fill="none" stroke="url(#lg2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 21h24M32 21v23" stroke="#f4eee9" stroke-width="6.5" stroke-linecap="round"/><circle class="recdot" cx="45" cy="44" r="4.5" fill="#ff4d3d"/></svg><span class="word">TOG<span class="lens"></span>ZHAN<span class="rec"></span></span></a><div>© Тогжан · Мобилограф · SMM</div></footer>
 
 <div class="float">
   <button class="ig" data-go="ig" aria-label="Instagram"><svg><use href="#i-ig"/></svg></button>
